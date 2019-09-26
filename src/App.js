@@ -6,9 +6,7 @@ import Home from './components/pages/Home';
 import Staff from './components/pages/Staff';
 import Login from './components/auth/Login';
 
-import './App.css';
-
-function onAuthRequired({history}) {
+function onAuthRequired({ history }) {
 	history.push('/login');
 }
 
@@ -21,7 +19,7 @@ function App() {
 				redirectUri={window.location.origin + '/implicit/callback'}
 				onAuthRequired={onAuthRequired}
 			>
-				<div className="App"> 
+				<div className="App">
 					<Navbar />
 					<div className="container">
 						<Route path="/" exact={true} component={Home} />
